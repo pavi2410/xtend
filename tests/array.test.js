@@ -1,8 +1,31 @@
-import { assertEquals } from "https://deno.land/std@0.102.0/testing/asserts.ts";
+import { assertEquals, assertNotEquals, assertThrows } from "https://deno.land/std@0.102.0/testing/asserts.ts";
 
 import '../index.js'
 
 Deno.test('array sum', () => {
   const arr = [1, 2, 3, 4]
   assertEquals(arr.sum(), 10)
+
+  const arr2 = [1, , , 4]
+  assertEquals(arr2.sum(), 5)
+
+  const arr3 = []
+  assertEquals(arr3.sum(), 0)
+
+  // const arr4 = ['1', '2', '3', '4']
+  // assertThrows(() => arr4.sum(), TypeError)
+
+  // const arr5 = [1, '2', '3', '4']
+  // assertThrows(() => arr5.sum(), TypeError)
 });
+
+Deno.test('array uniq', () => {
+  const arr = [1, 2, 3, 1]
+  assertEquals(arr.uniq(), [1, 2, 3])
+
+  const arr2 = [1, , , 1]
+  assertEquals(arr2.uniq(), [1, undefined])
+
+  const arr3 = []
+  assertEquals(arr3.uniq(), [])
+})

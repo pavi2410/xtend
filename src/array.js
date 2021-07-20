@@ -13,4 +13,29 @@ export default function xtendArray() {
     })
   }
 
+ /*
+  * Array.prototype.uniq()
+  * 
+  * @returns array
+  */
+  if (!Array.prototype.uniq) {
+    Object.defineProperty(Array.prototype, 'uniq', {
+      value() {
+        return [...new Set(this)]
+      }
+    })
+  }
+
+ /*
+  * Array.prototype.uniq()
+  * 
+  * @returns array
+  */
+  if (!Array.prototype.uniq) {
+    Object.defineProperty(Array.prototype, 'uniq', {
+      value() {
+        return [...new Set(this)]
+      }
+    })
+  }
 }
