@@ -1,2 +1,2 @@
-import xtendArray from './src/array.js'
-xtendArray()
+import xtendArray from "./src/array.js";
+xtendArray();
