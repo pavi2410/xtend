@@ -20,3 +20,5 @@ Extend JS standard library with xtend
 
 - Array
   - sum - returns the sum of all the values in array
+  - uniq - returns an array of unique values
+  - first - returns the first element in the array
