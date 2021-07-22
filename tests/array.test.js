@@ -1,6 +1,6 @@
-import { assertEquals } from "https://deno.land/std@0.102.0/testing/asserts.ts";
+import { assertEquals, assertStrictEquals } from 'https://deno.land/std@0.102.0/testing/asserts.ts'
 
-import "../index.js";
+import '../index.js'
 
 Deno.test("array sum", () => {
   const arr = [1, 2, 3, 4];
@@ -39,4 +39,15 @@ Deno.test("array first", () => {
 
   const arr3 = [];
   assertEquals(arr3.first(), null);
+});
+
+Deno.test("array last", () => {
+  const arr = [1, 2, 3, 4];
+  assertEquals(arr.last(), 4);
+
+  const arr2 = [1, 2, 3, null];
+  assertEquals(arr2.last(), null);
+
+  const arr3 = [];
+  assertEquals(arr3.last(), null);
 });

@@ -39,7 +39,18 @@ export default function xtendArray() {
   }
 
   /**
-   * Array.prototype.first()
+   * Array.prototype.last()
+   *
+   * @returns value | null
+   */
+  if (!Array.prototype.last) {
+    Object.defineProperty(Array.prototype, "last", {
+      value() {
+        const li = this.length - 1
+        return this[li] ?? null;
+      },
+    });
+  }
    *
    * @returns value | null
    */
