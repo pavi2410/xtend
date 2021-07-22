@@ -6,14 +6,12 @@ Extend JS standard library with xtend
 
 - xtend all modules
   ```js
-  import "https://deno.land/x/xtend@v0.1.0/index.js";
+  import "https://deno.land/x/xtend@v0.2.0/index.js";
   ```
 
 - xtend single module
   ```js
-  import xtendArray from "https://deno.land/x/xtend@v0.1.0/src/array.js";
-
-  xtendArray();
+  import "https://deno.land/x/xtend@v0.2.0/src/array.js";
   ```
 
 ## xtended modules
@@ -22,3 +20,4 @@ Extend JS standard library with xtend
   - sum - returns the sum of all the values in array
   - uniq - returns an array of unique values
   - first - returns the first element in the array
+  - last - returns the last element in the array
