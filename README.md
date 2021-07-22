@@ -2,6 +2,8 @@
 
 Extend JS standard library with xtend
 
+[![Deno](https://github.com/pavi2410/xtend/actions/workflows/deno.yml/badge.svg)](https://github.com/pavi2410/xtend/actions/workflows/deno.yml)
+
 ## Usage
 
 - xtend all modules
