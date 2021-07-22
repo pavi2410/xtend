@@ -1,4 +1,4 @@
-import { assertEquals, assertStrictEquals } from 'https://deno.land/std@0.102.0/testing/asserts.ts'
+import { assert, assertEquals } from 'https://deno.land/std@0.102.0/testing/asserts.ts'
 
 import '../index.js'
 
@@ -54,11 +54,14 @@ Deno.test('array last', () => {
 
 Deno.test('array clone', () => {
   const arr = [1, 2, 3, 4]
-  assertStrictEquals(arr.clone(), arr)
+  assertEquals(arr.clone(), arr)
+  assert(arr.clone() !== arr)
 
   const arr2 = [null, 2, 3, 4]
   assertEquals(arr2.clone(), arr2)
+  assertEquals(arr2.clone(), arr2)
 
   const arr3 = []
+  assertEquals(arr3.clone(), arr3)
   assertEquals(arr3.clone(), arr3)
 })
